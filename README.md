@@ -44,6 +44,7 @@ E-mail:823151643@ulife.com.br
 Padrão para subir os códigos:
 
 Back-end >>> Para o back "git commit -m "feat(back): mensagem" >>> EX: feat(back): cria a aplicação back
+
 Front-end >>> Para o front "git commit -m "feat(front): mensagem" >>> EX: feat(front): cria a aplicação front
 
 feat >>> Feature: Funcionalidade
