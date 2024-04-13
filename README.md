@@ -48,5 +48,7 @@ Back-end >>> Para o back "git commit -m "feat(back): mensagem" >>> EX: feat(back
 Front-end >>> Para o front "git commit -m "feat(front): mensagem" >>> EX: feat(front): cria a aplicação front
 
 feat >>> Feature: Funcionalidade
+
 () >>> back ou front para identificar qual parte dos projeto está subindo no repos.
+
 mensagem >>> Mais objetivo possóvel a frase do commit, ex: "cria a aplicacao react"
