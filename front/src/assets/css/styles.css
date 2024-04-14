@@ -30,3 +30,41 @@ header {
 .app__header-navbarList-item:hover {
     color: black;
 }
+
+.content {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    margin: 8% 10%;
+    gap: 50px;
+}
+
+.app__main-introduction-text {
+    color: #fff;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.app__main-introduction-text strong {
+    font-size: 2em;
+}
+
+.app__main-introduction-button {
+    padding: 20px 0;
+    background-color: transparent;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    cursor: pointer;
+    transition: 0.5s ease all;
+}
+
+.app__main-introduction-button:hover {
+    background-color: #fff;
+    color: #0C7BD9;
+}

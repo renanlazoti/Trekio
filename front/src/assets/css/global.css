@@ -12,7 +12,7 @@ body {
     height: 100vh;
     background-color: #0C7BD9;
     background-image: url('../img/fundo.png');
-    background-size: cover;
+    background-size: auto;
 }
 
 ul {
