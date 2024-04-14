@@ -1,7 +1,12 @@
 import React from 'react'
+import { Main } from './Main'
+import { Header } from './Header'
 
 export const App = () => {
   return (
-    <h1>Trekio</h1>
+    <>
+      <Header />
+      <Main />
+    </>
   )
 }
