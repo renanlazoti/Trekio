@@ -8,7 +8,7 @@ import idea from '../assets/img/idea.png'
 
 export const About = () => {
   return (
-    <section className="app__about-container">
+    <section className="app__about-container" id="app__about-section">
       <h3 className="app__about-title">Quem somos nós?</h3>
       <p className="app__about-p">
         Somos um portal de viagens, onde você encontrará inspirações para as

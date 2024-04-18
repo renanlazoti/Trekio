@@ -1,16 +1,10 @@
 import React from 'react'
-import { Main } from './Main'
-import { Header } from './Header'
-import { About } from './About'
+import AppRoutes from '../routes'
 
 export const App = () => {
   return (
     <div>
-      <Header />
-      <Main />
-      <div className='app__about'>
-        <About />
-      </div>
+      <AppRoutes/>
     </div>
   )
 }
