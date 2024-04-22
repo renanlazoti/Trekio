@@ -1,11 +1,19 @@
 import React from 'react';
 import { Header } from '../../components/Header';
+import { Input } from '../../components/Input';
+import { FaPlaneDeparture } from "react-icons/fa";
 
 const Chat = () => {
   return (
     <div>
         <Header/>
-        <h1>Converse com nosso chat e descubra o seu destino!</h1>
+        <div>
+          <Input type='text' placeholder='Destino' />
+          <Input type='number' placeholder='Dias' />
+          <Input type='text' placeholder='Passageiros' />
+          <button>Pesquisar <FaPlaneDeparture/></button>
+        </div>
+        <div></div>
     </div>
   )
 }
