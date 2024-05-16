@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+}
+
+:root {
+    --color-primary: #0C7BD9;
+    --color-dark: #000;
+    --color-light: #fff;
+
+    --border-radius: 2.2rem;
+}
