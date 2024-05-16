@@ -1,10 +1,10 @@
 import React from "react";
-import { Card } from "./Card";
-import backpack from '../assets/img/backpack.png'
-import tickets from '../assets/img/tickets.png'
-import restaurant from '../assets/img/restaurant.png'
-import idea from '../assets/img/idea.png'
-
+import { Card } from "../card/Card";
+import backpack from '../../assets/img/backpack.png'
+import tickets from '../../assets/img/tickets.png'
+import restaurant from '../../assets/img/restaurant.png'
+import idea from '../../assets/img/idea.png'
+import './about.css'
 
 export const About = () => {
   return (

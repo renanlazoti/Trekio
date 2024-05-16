@@ -1,7 +1,6 @@
 import React from 'react'
-import logo from '../assets/img/trekio.png'
-import '../assets/css/styles.css'
-import '../assets/css/global.css'
+import logo from '../../assets/img/trekio.png'
+import './header.css'
 import { Link } from 'react-router-dom'
 
 export const Header = () => {
@@ -19,7 +18,6 @@ export const Header = () => {
                 </li>
             </ul>
         </nav>
-        <div></div>
     </header>
   )
 }

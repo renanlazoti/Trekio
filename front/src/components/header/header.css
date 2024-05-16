@@ -1,0 +1,33 @@
+header {
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5rem;   
+}
+
+.app__header-logo {
+    width: 120px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.app__header-navbarList {
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: 1.1rem;
+    gap: 3rem;
+}
+
+.app__header-navbarList-item {
+    color: black;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: 0.5s ease all;
+}
+
+.app__header-navbarList-item:hover {
+    color: black;
+}

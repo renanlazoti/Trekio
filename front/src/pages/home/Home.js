@@ -1,6 +1,6 @@
-import { Header } from '../../components/Header';
-import { Main } from '../../components/Main';
-import { About } from '../../components/About';
+import { Header } from '../../components/header/Header';
+import { Main } from '../../components/main/Main';
+import { About } from '../../components/about/About';
 
 export const Home = () => {
   return (

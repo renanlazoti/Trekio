@@ -1,0 +1,34 @@
+.app__about {
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(198,237,252,1) 100%);
+    padding: 10%;
+}
+
+.app__main-introduction-button:hover {
+    background-color: #fff;
+    color: #0C7BD9;
+}
+
+.app__about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+.app__about-title {
+    color: #0C7BD9;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.app__about-p {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.app__about-card{
+    display: flex;
+    gap: 50px;
+}
