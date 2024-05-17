@@ -39,3 +39,15 @@
 #completion {
     margin: 0 1.2rem;
 }
+.chat__inputs{
+    display: flex;
+    justify-content: space-between;
+}
+.chat__button{
+    border-radius: var(--border-radius2);
+    width: 12%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+}
