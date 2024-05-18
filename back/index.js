@@ -44,9 +44,10 @@ const pool = mysql.createPool({
 });
 
 app.use((req, res, next) => {
-    const currentTime = moment().format();
-    const logMessage = `Endpoint ${req.method} ${req.url} acessado em ${currentTime}`;
-        pool.query('INSERT INTO tb_logs (logsDeConsultas) VALUES (?)', [logMessage], (err) => {
+    const logMessage = `Endpoint ${req.method} ${req.url}`;
+    const logDate = moment().format('DD-MM-YYYY');
+    const logHora = moment().format('HH:mm:ss');
+        pool.query('INSERT INTO tb_logs (logsDeConsultas, logsAcessoData, logsAcessoHora) VALUES (?, ?, ?)', [logMessage, logDate, logHora], (err) => {
         if (err) {
             console.error('Erro ao registrar o log:', err);
             return;
