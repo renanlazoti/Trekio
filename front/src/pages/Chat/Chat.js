@@ -1,11 +1,14 @@
 import React from "react";
 import "./chat.css";
+import logo from '../../assets/img/chatgpt.png'
 import { FaArrowLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { FaPlaneDeparture, FaUserCircle } from "react-icons/fa";
 import axios from "axios";
 import InputChat from "../../components/inputChat/InputChat";
 import Button from "../../components/button/Button";
+
+
 
 const Chat = () => {
   function enviar() {
@@ -34,6 +37,9 @@ const Chat = () => {
       </Link>
       <div className="page__chat-interacoes">
         <div className="page__chat-ask">
+        <div className="img_logo">
+            <img src={logo} alt="Logo do Chatgpt" className="chat_logo"/> 
+          </div>
           <div className="page__chat-user">
             <FaUserCircle />
             <p>Você:</p>
@@ -43,7 +49,6 @@ const Chat = () => {
             <FaUserCircle />
             <p>ChatGPT:</p>
           </div>
-
           <p id="completion"></p>
         </div>
         <div className="chat__inputs">

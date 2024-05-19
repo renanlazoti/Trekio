@@ -6,6 +6,19 @@
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
+    
+}
+
+.img_logo {
+    align-self: center;
+    width: auto;
+
+}
+.chat_logo {
+    align-self: center;
+    height: 55%;
+    width: 50%;
+
 }
 
 .page__chat-interacoes {
