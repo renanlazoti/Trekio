@@ -4,42 +4,41 @@ Descrição do projeto A3 >>> https://drive.google.com/drive/folders/1U95GhUXqEi
 
 RA e o E-mail dos colaboradores:
 
-Fernando Miranda da Silva Santos 
-RA: 82317389
-E-mail: 82317389@ulife.com.br
-
-Nicolas Vieira da Costa
-RA: 823117197
-E-mail: 823117197@ulife.com.br
-
-Bryan Vincent 
-RA: 823115629
-E-mail: 823115629@ulife.com.br
-
-Maria Luiza De Souza Silva 
-RA:82310135
-E-mail:82310135@ulife.com.br
-
-Isabela Maria de Sousa
-RA: 823224629
-E-mail: 823224629@ulife.com.br
+Andre Sena Melouchine 
+RA: 823151643
+E-mail:823151643@ulife.com.br
 
 Bruno Henrique de Melo Motta 
 RA: 823135764
 E-mail: 823135764@ulife.com.br
 
-Renan Ferreira Lazoti
-RA: 823134517
-E-mail: 823134517@ulife.com.br
+Bryan Vincent 
+RA: 823115629
+E-mail: 823115629@ulife.com.br
+
+Fernando Miranda da Silva Santos 
+RA: 82317389
+E-mail: 82317389@ulife.com.br
 
 Gabriela Silva Costa
 RA: 823125396
 E-mail: 823125396@ulife.com.br
 
-Andre Sena Melouchine 
-RA: 823151643
-E-mail:823151643@ulife.com.br
+Isabela Maria de Sousa
+RA: 823224629
+E-mail: 823224629@ulife.com.br
 
+Maria Luiza De Souza Silva 
+RA:82310135
+E-mail:82310135@ulife.com.br
+
+Nicolas Vieira da Costa
+RA: 823117197
+E-mail: 823117197@ulife.com.br
+
+Renan Ferreira Lazoti
+RA: 823134517
+E-mail: 823134517@ulife.com.br
 
 Padrão para subir os códigos:
 
@@ -49,6 +48,12 @@ Front-end >>> Para o front "git commit -m "feat(front): mensagem" >>> EX: feat(f
 
 feat >>> Feature: Funcionalidade
 
-(back ou front) >>> Irá identificar qual parte dos projeto está subindo no repos.
+(back ou front) >>> Irá identificar qual parte do projeto está subindo no repos.
 
-mensagem >>> Mais objetivo possóvel a frase do commit, ex: "cria a aplicacao react"
+mensagem >>> Mais objetivo possível a frase do commit, ex: "cria a aplicacao react"
+
+Refatoração >>> Deve ser utilizado caso tenha melhorado ou adicionado algo novo no código que já
+estava em execução >>> EX: feat(back): refatorando função de logs
+
+Manutenção >>> Deve ser utilizado caso tenha quebras numa versão que já tenha subido no repos, será
+a correção dos erros que haverá no código.
