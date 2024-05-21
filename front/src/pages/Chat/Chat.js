@@ -54,12 +54,14 @@ const Chat = () => {
           placeholder="Digite o seu Destino..."
           id="destino"
         />
-        <InputChat type="number" placeholder="Por quantos dias..." id="data" />
-        <InputChat
-          type="text"
-          placeholder="Digite o seu Objetivo..."
-          id="objetivo"
-        />
+        <InputChat type="number" placeholder="Dias..." id="data" />
+        <select id="objetivo" className="chat__select">
+        <option value="">Escolha uma opção:</option>
+        <option value="gastronomia">Gastrônomia </option>
+        <option value="pontos turisticos">Pontos Turísticos</option>
+        <option value="passeios noturnos">Passeios noturnos</option>
+        <option value="lazer">Lazer</option>
+    </select>
 
         <Button className="chat__button" onClick={enviar}>
           Enviar

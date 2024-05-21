@@ -1,34 +1,69 @@
 .app__about {
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(198,237,252,1) 100%);
-    padding: 10%;
-}
-
-.app__main-introduction-button:hover {
-    background-color: #fff;
-    color: #0C7BD9;
+    background: rgb(255, 255, 255);
+    margin-left: 70px;
+    margin-top: 8%;
 }
 
 .app__about-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 60px;
+    justify-content: center;
+      margin-right: 10%;
+    margin-left: 10%;
+    margin-bottom: 9%;
+    margin-top: 6%;
 }
 
-.app__about-title {
-    color: #0C7BD9;
-    font-size: 2.5em;
+.trekio {
+font-size: 40px;
+margin-bottom: 10px;
+}
+
+.quem-somos {
+    color: #8ac9e3;
+    font-size: 3.5em;
     font-weight: bold;
+    text-align: left;
+    margin-bottom: 20px; 
 }
 
-.app__about-p {
-    text-align: center;
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.app__about-card{
+.sobre {
     display: flex;
     gap: 50px;
+    justify-content: space-between;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: flex;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+
+.texts {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sobre-texto {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 20px; 
+}
+
+
+
+.image img {
+    max-width: 58%;
+    height: 100%;
+    margin-left: 20%;
+}
+
+.background-image {
+    width: 300px; 
+    height: auto; 
 }

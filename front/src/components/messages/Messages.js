@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React from "react";
 import './messages.css';
 
 export const Messages = ({icon: Icon, username, id}) => {
