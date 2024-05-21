@@ -8,6 +8,7 @@ const InputChat = ({type, placeholder, id}) => {
         type={type}
         placeholder={placeholder}
         id={id}
+        min='0'
       />
     </div>
   );
