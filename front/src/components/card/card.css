@@ -1,8 +1,8 @@
 .app__card-border {
     width: 100%;
     height: auto;
-    border: 2px solid black;
-    padding: 35px;
+    border: 0.1rem solid var(--color-dark);
+    padding: 2rem;
     border-radius: 50%;
 }
 
@@ -10,15 +10,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 0.5rem;
 }
 
 .app__card-text {
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-.app__about-card{
-    display: flex;
-    gap: 50px;
+    font-size: 1.1rem;
+    font-weight: 600
 }

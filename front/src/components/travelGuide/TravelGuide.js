@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import './travelGuide.css'
-
 import { FaPlaneDeparture } from "react-icons/fa";
 import { IoLocationOutline } from "react-icons/io5";
 import { BsCalendarDate } from "react-icons/bs";

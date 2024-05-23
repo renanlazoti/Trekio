@@ -4,9 +4,9 @@ import { TravelGuide } from '../travelGuide/TravelGuide'
 
 export const Main = () => {
   return (
-    <section className='content'>
+    <section className='app__main-content'>
         <div className="content-introduction">
-          <p className='app__main-introduction-text'><strong>Trilhe</strong><br />suas próximas aventuras <br />com nossos roteiros!</p>
+          <p className='introduction-text'><strong>Trilhe</strong><br />suas próximas aventuras <br />com nossos roteiros!</p>
           <TravelGuide />
         </div>
     </section>

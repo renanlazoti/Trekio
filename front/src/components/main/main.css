@@ -1,4 +1,4 @@
-.content {
+.app__main-content {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -12,32 +12,31 @@
     background-image: url('../../assets/img/kaotaru-dCOuYgsm9X8-unsplash.jpg');
     background-size: cover;
     background-position: bottom;
-    border-radius: 1rem;
+    border-radius: var(--border-radius2);
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 0 10rem;
     gap: 2rem;
-    margin-top: 4rem;
 }
 
-.app__main-introduction-text {
-    color: black;
-    font-size: 3em;
+.introduction-text {
+    color: var(--color-dark);
+    font-size: 3rem;
     font-weight: bold;
 }
 
-.app__main-introduction-text strong {
+.introduction-text strong {
     font-size: 6rem;
 }
 
 .app__main-introduction-button {
     width: 15rem;
-    height: 90%;
+    height: 5.5rem;
     padding: 0.5rem 1rem;
-    background-color: #000;
-    border-radius: 20px;
-    color: #fff;
+    background-color: var(--color-dark);
+    border-radius: var(--border-radius2);
+    color: var(--color-light);
     font-weight: bold;
     display: flex;
     align-items: center;

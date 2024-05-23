@@ -15,8 +15,9 @@ html {
 }
 
 :root {
-    --color-primary: #0C7BD9;
+    --color-primary: #8ac9e3;
     --color-secondary: #A1A1A1;
+    --color-tertiary: #eaeaea;
     --color-dark: #000;
     --color-light: #fff;
 
