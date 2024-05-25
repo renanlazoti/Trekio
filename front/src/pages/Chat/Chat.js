@@ -29,21 +29,21 @@ const Chat = () => {
         setIsVisible(true);
         setIsLogoVisible(false);
 
-      axios.post("http://localhost:4000/salvar-pergunta-resposta", {
-        pergunta: pergunta,
-        resposta: resposta,
+        axios.post("http://localhost:4000/salvar-pergunta-resposta", {
+          pergunta: pergunta,
+          resposta: resposta,
+        })
+          .then((res) => {
+            console.log("Pergunta registrada com sucesso:", pergunta);
+            console.log("Resposta registrada com sucesso:", resposta);
+          })
+          .catch((error) => {
+            console.log("Erro ao salvar pergunta e resposta", error);
+          });
       })
-      .then((res) => {
-        console.log("Pergunta registrada com sucesso:", pergunta);
-        console.log("Resposta registrada com sucesso:", resposta);
-      })
-      .catch((error) => {
-        console.log("Erro ao salvar pergunta e resposta", error);
+      .catch((erro) => {
+        console.log(erro);
       });
-    })
-    .catch((erro) => {
-      console.log(erro);
-    });
   };
 
   return (
