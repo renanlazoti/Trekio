@@ -1,38 +1,34 @@
 const express = require('express');
-const app = express();
-app.use(express.json());
+const cors = require('cors');
 const mysql = require('mysql');
 const { OpenAI } = require('openai');
 const moment = require('moment');
 require("dotenv").config();
 
+const app = express();
+app.use(express.json());
+app.use(cors());
+
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const openai = new OpenAI(OPENAI_API_KEY);
 
-app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-    next();
-});
-
 app.post('/pergunte-ao-chatgpt', async (req, res) => {
     const { prompt } = req.body;
-
-    const model = 'gpt-3.5-turbo';
-    const role = 'user';
-    const max_tokens = 50;
-
-    const completion = await openai.chat.completions.create({
-        messages: [{ role: role, content: prompt}],
-        model: model,
-        max_tokens: max_tokens
-    });
-
-    res.json({completion: completion.choices[0].message.content});
+    try {
+        const completion = await openai.chat.completions.create({
+            messages: [{ role: 'user', content: prompt }],
+            model: 'gpt-3.5-turbo',
+            max_tokens: 50
+        });
+        const resposta = completion.choices[0].message.content;
+        res.json({ completion: resposta });
+    } catch (error) {
+        console.error('Erro ao obter resposta do OpenAI:', error);
+        res.status(500).json({ error: 'Erro ao obter resposta do OpenAI' });
+    }
 });
 
-const { DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE } = process.env
+const { DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE } = process.env;
 const pool = mysql.createPool({
     host: DB_HOST,
     user: DB_USER,
@@ -43,24 +39,37 @@ const pool = mysql.createPool({
     queueLimit: 0,
 });
 
-app.use((req, res, next) => {
-    const logMessage = `Endpoint ${req.method} ${req.url}`;
-    const logDate = moment().format('DD-MM-YYYY');
-    const logHora = moment().format('HH:mm:ss');
-        pool.query('INSERT INTO tb_logs (logsDeConsultas, logsAcessoData, logsAcessoHora) VALUES (?, ?, ?)', [logMessage, logDate, logHora], (err) => {
-        if (err) {
-            console.error('Erro ao registrar o log:', err);
-            return;
+app.post('/salvar-pergunta-resposta', (req, res) => {
+    const { pergunta, resposta } = req.body;
+    console.log("Recebido para salvar:", { pergunta, resposta });
+    
+    if (!pergunta || !resposta) {
+        return res.status(400).json({ error: 'Pergunta e resposta são obrigatórias' });
+    }
+
+    pool.query(
+        'INSERT INTO tb_logs (perguntaChatGPT, respostaChatGPT, logsDeEndPoint, logsAcessoData, logsAcessoHora) VALUES (?, ?, ?, ?, ?)', 
+        [
+            pergunta, 
+            resposta, 
+            `Endpoint ${req.method} ${req.url}`, 
+            moment().format('DD-MM-YYYY'), 
+            moment().format('HH:mm:ss')
+        ], 
+        (err, results) => {
+            if (err) {
+                console.error('Erro ao salvar pergunta e resposta:', err);
+                return res.status(500).json({ error: 'Erro ao salvar pergunta e resposta' });
+            }
+            res.json({ message: 'Pergunta e resposta salvas com sucesso!' });
         }
-        console.log('Log registrado com sucesso:', logMessage);
-    });
-    next();
+    );
 });
 
 app.get('/consultar', (req, res) => {
-    res.send('Consulta realizada com sucesso')
+    res.send('Consulta realizada com sucesso');
 });
 
 app.listen(4000, () => {
-    console.log('Serviço em execução na porta 4000')
+    console.log('Serviço em execução na porta 4000');
 });
