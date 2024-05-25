@@ -1,0 +1,11 @@
+.app__footer-content {
+    display: flex;
+    padding: 2rem 9.2rem;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.app__footer-content img {
+    width: 2rem;
+}

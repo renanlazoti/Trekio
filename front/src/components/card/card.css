@@ -1,16 +1,32 @@
-.app__card-border {
-    width: 100%;
-    height: auto;
-    border: 0.1rem solid var(--color-dark);
-    padding: 2rem;
-    border-radius: 50%;
-}
-
 .app__card {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
+}
+
+.app__card-border {
+    width: 100%;
+    height: auto;
+    border-bottom: 0.3rem solid var(--color-tertiary);
+    padding: 2rem;
+    border-radius: var(--border-radius2);
+}
+
+.app__card-border:hover {
+    transition: all 500ms ease;
+    border-bottom: 0.3rem solid var(--color-primary);
+}
+
+.app__card-icon {
+    font-size: 3.5rem;
+    color: var(--color-secondary);
+}
+
+.app__card-border:hover .app__card-icon {
+    transform: scale(1.1);
+    transition: all 500ms ease;
+    color: var(--color-primary);
 }
 
 .app__card-text {

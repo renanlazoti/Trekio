@@ -1,9 +1,9 @@
 import React from "react";
 import { Card } from "../card/Card";
-import backpack from '../../assets/img/backpack.png'
-import tickets from '../../assets/img/tickets.png'
-import restaurant from '../../assets/img/restaurant.png'
-import idea from '../../assets/img/idea.png'
+import { FaMapLocationDot } from "react-icons/fa6";
+import { GiTicket } from "react-icons/gi";
+import { IoIosRestaurant } from "react-icons/io";
+import { TiLightbulb } from "react-icons/ti";
 import aviao from '../../assets/img/aviao.jpg'
 import './about.css'
 
@@ -22,10 +22,10 @@ export const About = () => {
             gastronomia local.
           </p>
           <div className="informations-cards">
-            <Card text="Roteiros" img={backpack} />
-            <Card text="Passeios" img={tickets} />
-            <Card text="Gastronomia" img={restaurant} />
-            <Card text="Dicas" img={idea} />
+            <Card text="Roteiros" icon={FaMapLocationDot} />
+            <Card text="Passeios" icon={GiTicket} />
+            <Card text="Gastronomia" icon={IoIosRestaurant} />
+            <Card text="Dicas" icon={TiLightbulb} />
           </div>
         </div>
         <img src={aviao} alt="Imagem da asa de um avião" className="app__about-img" />
