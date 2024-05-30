@@ -1,11 +1,102 @@
-.app__footer-content {
+.app__footer {
+    background-color: var(--background-color-dark);
+    padding: 2rem 0;
+    text-align: center;
+  }
+  
+  .app__footer-content {
     display: flex;
     padding: 2rem 9.2rem;
     align-items: center;
     justify-content: center;
     gap: .5rem;
-}
-
-.app__footer-content img {
+  }
+  
+  .app__footer-content img {
     width: 2rem;
+  }
+  
+
+  .newsletter {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background-color: var(--background-color-light);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .newsletter h3 {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+  }
+  
+  .newsletter p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .newsletter-form input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .newsletter-form button {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .newsletter-form button:hover {
+    background-color: var(--color-primary);
+    color: white;
+  }
+
+  .banner-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .banner {
+    width: 48%;
+    height: 221px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+
+  .alert {
+    padding: 1rem;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .banner {
+        max-width: 100%;
+    }
+
+    .newsletter-form input {
+        width: 80%;
+    }
 }
