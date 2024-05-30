@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./chat.css";
 import { FaArrowLeft, FaPlaneDeparture, FaUserCircle, FaPaperPlane } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -12,7 +12,70 @@ const Chat = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isLogoVisible, setIsLogoVisible] = useState(true);
 
+  const validarCampos = () => {
+    const destino = document.getElementById("destino");
+    const data = document.getElementById("data");
+    const objetivo = document.getElementById("objetivo");
+    let valid = true;
+
+    if (destino.value.trim() === "") {
+      destino.classList.add("invalid");
+      valid = false;
+    } else {
+      destino.classList.remove("invalid");
+    }
+
+    if (data.value.trim() === "") {
+      data.classList.add("invalid");
+      valid = false;
+    } else {
+      data.classList.remove("invalid");
+    }
+
+    if (objetivo.value.trim() === "") {
+      objetivo.classList.add("invalid");
+      valid = false;
+    } else {
+      objetivo.classList.remove("invalid");
+    }
+
+    return valid;
+  };
+
+  const adicionarListeners = () => {
+    const destino = document.getElementById("destino");
+    const data = document.getElementById("data");
+    const objetivo = document.getElementById("objetivo");
+
+    destino.addEventListener("input", () => {
+      if (destino.value.trim() !== "") {
+        destino.classList.remove("invalid");
+      }
+    });
+
+    data.addEventListener("input", () => {
+      if (data.value.trim() !== "") {
+        data.classList.remove("invalid");
+      }
+    });
+
+    objetivo.addEventListener("input", () => {
+      if (objetivo.value.trim() !== "") {
+        objetivo.classList.remove("invalid");
+      }
+    });
+  };
+
+  useEffect(() => {
+    adicionarListeners();
+  }, []); 
+
   const enviar = () => {
+    if (!validarCampos()) {
+      alert("Preencha todos os campos.");
+      return;
+    }
+
     const destino = document.getElementById("destino").value;
     const data = document.getElementById("data").value;
     const objetivo = document.getElementById("objetivo").value;
@@ -45,6 +108,7 @@ const Chat = () => {
         console.log(erro);
       });
   };
+
 
   return (
     <div id="page__chat">
