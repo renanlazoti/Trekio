@@ -31,8 +31,9 @@
 }
 
 .app__main-introduction-button {
-    width: 15rem;
-    height: 5.5rem;
+    width: 100%;
+    max-width: 10rem;
+    height: 4rem;
     padding: 0.5rem 1rem;
     background-color: var(--color-dark);
     border-radius: var(--border-radius2);
@@ -41,7 +42,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 2rem;
     cursor: pointer;
     transition: 0.5s ease all;
+    margin-left: 2rem;
+}
+
+@media(max-width: 940px){
+    .introduction-text{
+        font-size: 2rem;
+        margin-top: 1.5rem;
+    }
+
+    .app__main-introduction-button{
+        margin-top: 2rem;
+        margin-left: 3.5rem;
+    }
 }
