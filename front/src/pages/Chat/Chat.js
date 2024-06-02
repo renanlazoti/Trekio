@@ -127,12 +127,12 @@ const Chat = () => {
       <div className="chat__inputs">
         <InputChat
           type="text"
-          placeholder="Digite o seu Destino..."
+          placeholder="Destino"
           id="destino"
         />
-        <InputChat type="number" placeholder="Dias..." id="data" />
+        <InputChat className="chat__dias" type="number" placeholder="Dias" id="data" />
         <select id="objetivo" className="chat__select">
-          <option value="">Escolha uma opção:</option>
+          <option value="">Roteiro</option>
           <option value="gastronomia">Gastronomia</option>
           <option value="pontos turisticos">Pontos Turísticos</option>
           <option value="passeios noturnos">Passeios Noturnos</option>

@@ -86,3 +86,9 @@
 .invalid {
     border: 0.2rem solid red;
   }
+
+  @media(max-width: 850px){
+    .chat__inputs{
+        grid-template-columns: 2.1fr 1.5fr 1.5fr 1.5fr;
+    }
+}

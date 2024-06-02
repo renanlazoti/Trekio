@@ -9,6 +9,7 @@ header {
   background-color: var(--color-light); 
   border-radius: 0 0 1rem 1rem;
   border-bottom: 0.2rem solid var(--color-tertiary);
+  z-index: 1000;
 }
   
 .app__header-logo {
@@ -36,3 +37,4 @@ header {
 .app__header-navbarList-item:hover {
   color: var(--color-primary);
 }
+
