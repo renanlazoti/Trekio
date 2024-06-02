@@ -9,31 +9,30 @@ import { PiClipboardText } from "react-icons/pi";
 export const TravelGuide = () => {
   return (
     <div className='travelGuide__content'>
-        <div className='travelGuide__item'>
-            <IoLocationOutline className='travelGuide__item-img' /> 
-            <div className='travelGuide__item-information'>
-              <p>Informe seu</p>
-              <p><strong>Destino</strong></p>
-            </div>
+      <div className='travelGuide__item'>
+        <IoLocationOutline className='travelGuide__item-img' />
+        <div className='travelGuide__item-information'>
+          <p>Informe seu</p>
+          <p><strong>Destino</strong></p>
         </div>
-        &gt;
-        <div className='travelGuide__item'>
-          <BsCalendarDate className='travelGuide__item-img' />
-          <div className='travelGuide__item-information'>
-            <p>Data da sua</p>
-            <p><strong>Jornada</strong></p>
-          </div>
+      </div>
+      <span className='travelGuide__separator'>&gt;</span>
+      <div className='travelGuide__item'>
+        <BsCalendarDate className='travelGuide__item-img' />
+        <div className='travelGuide__item-information'>
+          <p>Data da sua</p>
+          <p><strong>Jornada</strong></p>
         </div>
-        &gt;
-        <div className='travelGuide__item'>
-          <PiClipboardText  className='travelGuide__item-img' /> 
-          <div className='travelGuide__item-information'>
-            <p>Escolha o seu</p>
-            <p><strong>Objetivo</strong></p>
-          </div>
+      </div>
+      <span className='travelGuide__separator'>&gt;</span>
+      <div className='travelGuide__item'>
+        <PiClipboardText className='travelGuide__item-img' />
+        <div className='travelGuide__item-information'>
+          <p>Escolha o seu</p>
+          <p><strong>Objetivo</strong></p>
         </div>
-        &gt;
-        <Link to="/chat" className='app__main-introduction-button'><FaPlaneDeparture/>Descubra</Link>
+      </div>
+      <Link to="/chat" className='app__main-introduction-button'><FaPlaneDeparture />Descubra</Link>
     </div>
   )
 }

@@ -100,3 +100,9 @@
         width: 80%;
     }
 }
+
+@media(max-width: 730px){
+  .banner-container{
+    display: none;
+  }
+}
