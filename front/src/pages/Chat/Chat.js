@@ -73,7 +73,7 @@ const Chat = () => {
 
   const enviar = () => {
     if (!validarCampos()) {
-      alert("Preencha todos os campos.");
+      alert("Por favor, preencher todas as informações necessárias para garantir uma viagem tranquila.");
       return;
     }
 
