@@ -14,3 +14,7 @@
     align-items: center;
     font-size: 2rem;
 }
+
+.page__chat-user img {
+    width: 64px;
+}

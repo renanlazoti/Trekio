@@ -98,7 +98,8 @@
     .app__about-informations{
         flex-direction: column;
         align-items: center;
-        margin-left: 5.5rem;
+        justify-content: center;
+        width: 20rem;
     }
 
     .informations-title{

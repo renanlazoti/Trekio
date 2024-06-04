@@ -79,8 +79,8 @@
   .banner {
     width: 48%;
     height: 221px;
-    object-fit: cover;
-    border-radius: 0.5rem;
+    object-fit: contain;
+    border-radius: var(--border-radius);
   }
 
   .alert {

@@ -1,34 +1,27 @@
 #page__chat {
     height: 100vh;
     padding: 1.1rem 2.2rem;
-    background-color: #8ac9e3;
+    background-color: var(--color-primary);
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
-    
-}
-
-.chat_logo {
-    width: 160px;
-    height: 160px;
-    opacity: 8%;
 }
 
 .page__chat-interacoes {
     width: 100%;
     height: 100%;
     border-radius: 1rem;
-    background-color: white;
+    background-color: var(--color-light);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 4rem;
+    overflow: auto;
 }
 
 .page__chat-back {
     font-size: 2rem;
-    color: black;
+    color: var(--color-dark);
 }
 
 .page__chat-ask {
@@ -60,17 +53,26 @@
     background-color: white;
     align-items: center;
     text-align: center;
-    border: 0.1rem solid var(--color-dark);
-   
+    border: none;
+    border-bottom: 0.2rem solid var(--color-tertiary);
+}
+
+.chat__select:focus {
+    border-bottom: 0.2rem solid var(--color-dark);
 }
 
 .chat__button{
-    border-radius: var(--border-radius2);
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.7rem;
-    height: 3.2rem;
+    height: 100%;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: var(--border-radius2);
+    cursor: pointer;
 }
 
 .chat__messages {
@@ -84,11 +86,32 @@
 }
 
 .invalid {
-    border: 0.2rem solid red;
-  }
+    border: 0.1rem solid red;
+}
 
-  @media(max-width: 850px){
+@media(max-width: 850px){
     .chat__inputs{
-        grid-template-columns: 2.1fr 1.5fr 1.5fr 1.5fr;
+        grid-template-columns: 2fr 1.5fr 1.5fr 1.5fr;
+    }
+
+    .page__chat-interacoes {
+        padding: .9rem;
+    }
+
+    #completion {
+        font-size: 1rem;
+        padding: 0;
+        text-align: justify;
+    }
+
+    #pergunta {
+        font-size: 1rem;
+        padding: 0;
+        text-align: justify;
+    }
+
+    .chat__button {
+        gap: .3rem;
+        padding: 1rem .2rem;
     }
 }

@@ -16,7 +16,7 @@ export const TravelGuide = () => {
           <p><strong>Destino</strong></p>
         </div>
       </div>
-      <span className='travelGuide__separator'>&gt;</span>
+      <div className='separator'></div>
       <div className='travelGuide__item'>
         <BsCalendarDate className='travelGuide__item-img' />
         <div className='travelGuide__item-information'>
@@ -24,7 +24,7 @@ export const TravelGuide = () => {
           <p><strong>Jornada</strong></p>
         </div>
       </div>
-      <span className='travelGuide__separator'>&gt;</span>
+      <div className="separator"></div>
       <div className='travelGuide__item'>
         <PiClipboardText className='travelGuide__item-img' />
         <div className='travelGuide__item-information'>
@@ -32,7 +32,7 @@ export const TravelGuide = () => {
           <p><strong>Objetivo</strong></p>
         </div>
       </div>
-      <Link to="/chat" className='app__main-introduction-button'><FaPlaneDeparture />Descubra</Link>
+      <Link to="/chat" className='app__main-introduction-button'>Descubra<FaPlaneDeparture /></Link>
     </div>
   )
 }

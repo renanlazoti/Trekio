@@ -6,9 +6,8 @@
     justify-content: space-around;
     padding: 1rem;
     background-color: var(--color-light);
-    max-width: 1400px;
+    max-width: 1100px;
     min-width: 300px;
-    margin: 0 auto;
 }
 
 .travelGuide__item {
@@ -38,11 +37,18 @@
     color: var(--color-dark);
 }
 
-.travelGuide__separator{
-    font-size: 2rem;
-    color: var(--color-primary);
-    margin-left: 0.8rem;
-    z-index: 1;
+.app__main-introduction-button {
+    height: 90%;
+    gap: .5rem;
+}
+
+.separator{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: .1rem;
+    height: 3rem;
+    background-color: var(--color-secondary);
 }
 
 
@@ -77,9 +83,10 @@
         font-size: 1rem;
     }
 
-    .travelGuide__separator{
+    .separator{
         transform: rotate(90deg);
         align-self: center;
+        height: 3rem;
     }
 }
 

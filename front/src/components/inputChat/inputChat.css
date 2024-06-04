@@ -3,7 +3,18 @@
     height: 3.2rem;
     padding: 1rem 1.2rem;
     font-size: 1rem;
+    border: none;
+    border-bottom: 0.2rem solid var(--color-tertiary);
+    padding: 2rem;
     border-radius: var(--border-radius2);
 }
 
+.inputChat input:focus {
+    border-bottom: 0.2rem solid var(--color-dark);
+}
 
+@media(max-width: 850px){
+    .inputChat input {
+        padding: 1rem .5rem;
+    }
+}
