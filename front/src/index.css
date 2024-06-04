@@ -20,7 +20,7 @@ html {
     --color-tertiary: #eaeaea;
     --color-dark: #000;
     --color-light: #fff;
-
+    --color-red: red;
     --border-radius: 2.2rem;
     --border-radius2: 1rem;
 }

@@ -60,7 +60,7 @@
 }
 
 .popup-content {
-    background-color: white;
+    background-color: var(--color-light);
     padding: 2rem;
     border-radius: 0.5rem;
     box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);

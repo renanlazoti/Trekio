@@ -1,5 +1,4 @@
 .app__footer {
-    background-color: var(--background-color-dark);
     padding: 2rem 0;
     text-align: center;
   }
@@ -20,7 +19,6 @@
   .newsletter {
     margin-bottom: 2rem;
     padding: 2rem;
-    background-color: var(--background-color-light);
     border-radius: 0.5rem;
     box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -65,7 +63,7 @@
   
   .newsletter-form button:hover {
     background-color: var(--color-primary);
-    color: white;
+    color: var(--color-light);
   }
 
   .banner-container {

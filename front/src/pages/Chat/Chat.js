@@ -11,7 +11,7 @@ import User from "../../assets/img/user.png";
 
 const Chat = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [isLogoVisible, setIsLogoVisible] = useState(true);
+  const [setIsLogoVisible] = useState(true);
 
   const validarCampos = () => {
     const destino = document.getElementById("destino");
@@ -125,14 +125,16 @@ const Chat = () => {
       </div>
       <div>
         <div className="chat__inputs">
-          <InputChat type="text" placeholder="Destino" id="destino" />
+          <InputChat type="text" placeholder="Destino" id="destino" 
+           />
           <InputChat
             type="number"
             placeholder="Dias"
             id="data"
+            
           />
           <select id="objetivo" className="chat__select">
-            <option value="">Roteiro</option>
+            <option value="">Selecione o Roteiro</option>
             <option value="gastronomia">Gastronomia</option>
             <option value="pontos turisticos">Pontos Turísticos</option>
             <option value="passeios noturnos">Passeios Noturnos</option>
